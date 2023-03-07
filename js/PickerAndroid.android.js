@@ -94,7 +94,7 @@ function PickerAndroid(props: PickerAndroidProps, ref: PickerRef): React.Node {
 
       const {enabled = true} = child.props;
 
-      const {color, label, style = {}} = child.props;
+      const {color, label, style = {}, testID} = child.props;
 
       const processedColor = processColor(color);
 
@@ -109,6 +109,7 @@ function PickerAndroid(props: PickerAndroidProps, ref: PickerRef): React.Node {
             ? processColor(style.backgroundColor)
             : null,
         },
+        testID,
       };
     });
     return [items, selected];

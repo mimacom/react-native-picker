@@ -389,6 +389,15 @@ If set to false, the specific item will be disabled, i.e. the user will not be a
 | boolean  | no       | Android  |
 
 
+### `testID`
+
+Used to locate this item in end-to-end tests.
+
+| Type   | Required |
+| ------ | -------- |
+| string | No       |
+
+
 ### PickerIOS
 ### Props
 

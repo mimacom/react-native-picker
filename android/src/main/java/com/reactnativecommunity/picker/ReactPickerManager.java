@@ -10,6 +10,7 @@ package com.reactnativecommunity.picker;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -298,6 +299,10 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
       if (item.hasKey("fontFamily") && !item.isNull("fontFamily")) {
         Typeface face = Typeface.create(item.getString("fontFamily"), Typeface.NORMAL);
         textView.setTypeface(face);
+      }
+
+      if (item.hasKey("testID") && !item.isNull("testID")) {
+        // TODO set test ID as resource ID
       }
 
       boolean isRTL = I18nUtil.getInstance().isRTL(convertView.getContext());

@@ -39,4 +39,5 @@ export type PickerItem = $ReadOnly<{|
    * @platform android
    */
   enabled?: ?boolean,
+  testID: ?string,
 |}>;
